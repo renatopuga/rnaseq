@@ -138,7 +138,7 @@ typeFiles[7]="fpkm"
 # 5 = expected_count, 6=tpm and 7=fpkm
 for i in 5 6 7
 do
-    R --file=../run.merge.files.R --args gene-level $i gene-level-${typeFiles[$i]}
+    R --file=../merge.files.R --args gene-level $i gene-level-${typeFiles[$i]}
 done
 ```
 
