@@ -53,7 +53,7 @@ for d in qc_*/ ; do
 done
 ```
 
-**STAR + RSEM**
+## STAR + RSEM
 
 run the script
 ```bash
