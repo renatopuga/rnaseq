@@ -2,7 +2,7 @@
 
 
 
-### QC report 
+## QC report 
 
 **qualimap**
 
