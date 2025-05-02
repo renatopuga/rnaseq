@@ -107,7 +107,7 @@ $RSEM/rsem-calculate-expression \
 
 ```
 
-## Expressio Table (Expected_count, TPM and FPKM)
+## Expression Table (Expected_count, TPM and FPKM)
 
 run the script
 ```bash
