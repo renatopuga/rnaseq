@@ -55,6 +55,13 @@ done
 
 **STAR + RSEM**
 
+run the script
+```bash
+sh star-rsem.sh MY_SAMPLE
+
+```
+
+**code bash**
 ```bash
 GENOMEDIR="/data/apps/star/ref/human_rsem_refseq"
 RSEM="/opt/RSEM"
@@ -105,7 +112,14 @@ rm -f $sample.fastq
 
 **merge table**
 
+run the script
 ```bash
+Rscript merge-table.R
+```
+
+**code R**
+
+```R
 # definindo diretório onde as amostras *abundance.tsv
 args <- commandArgs(TRUE)
 
