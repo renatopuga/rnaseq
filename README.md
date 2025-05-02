@@ -8,7 +8,7 @@ Post-alignment quality control was performed with Qualimap (v2.3), generating su
 
 ## QC report 
 
-**qualimap**
+**qualimap - single end**
 
 ```bash
 BAM="$1"
@@ -23,7 +23,6 @@ $qualimap rnaseq \
 -outdir qc_$output \
 -a proportional \
 -bam $BAM \
---paired \
 -gtf $GTF \
 --java-mem-size=10G
 ```
@@ -55,7 +54,7 @@ for d in qc_*/ ; do
 done
 ```
 
-## STAR + RSEM
+## STAR + RSEM (single-end)
 
 run the script
 ```bash
