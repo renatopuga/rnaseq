@@ -114,10 +114,36 @@ rm -f $sample.fastq
 
 run the script
 ```bash
-Rscript merge-table.R
+sh call-merge-files.sh
 ```
 
-**code R**
+```bash
+#!/bin/bash
+
+# by genes
+
+cd RNASEQ_data || exit
+
+mkdir -p gene-level
+cd gene-level || exit
+
+ls -d1 ../rsem.* | gawk '{print("ln -s",$1"/rsem.genes.results",gensub("../rsem.","","g",$1))}' | sh
+cd ..
+
+# Declaração correta do array
+declare -A typeFiles
+typeFiles[5]="expected_count"
+typeFiles[6]="tpm"
+typeFiles[7]="fpkm"
+
+# Loop
+for i in 5 6 7
+do
+    R --file=../run.merge.files.R --args gene-level $i gene-level-${typeFiles[$i]}
+done
+```
+
+**code R (merge-files.R)**
 
 ```R
 # definindo diretório onde as amostras *abundance.tsv
