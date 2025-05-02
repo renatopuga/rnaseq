@@ -1,5 +1,9 @@
 # RNAseq Analysis STAR + RSEM 
 
+RNA-seq data processing
+RNA sequencing data were processed using an automated pipeline available at https://github.com/renatopuga/rnaseq. Raw FASTQ files were aligned to the human reference genome (GRCh38.p14) using STAR (v2.7.10a) with default parameters. Gene-level expression was quantified with RSEM (v1.3.3) using annotation files from NCBI.
+
+Post-alignment quality control was performed with Qualimap (v2.3), generating summary statistics including mapping rate, exon/intron distribution, and coverage metrics. QC reports were aggregated using built-in scripts. All inputs, parameters, and intermediate steps are fully documented in the repository to ensure computational reproducibility.
 
 
 ## QC report 
