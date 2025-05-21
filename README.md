@@ -185,8 +185,8 @@ The %groups hash defines which samples (S01, S02, S03, S04) belong to each group
 
 - For each group and each replicate, a new output directory is created under fake_pools/.
 - For each sample in the group:
-- Subsamples a fixed number of reads using seqtk sample with a reproducible random seed.
-- Subsampled reads from all samples in the group are combined into a single gzip-compressed FASTQ file representing the fake pool replicate.
+  - Subsamples a fixed number of reads using seqtk sample with a reproducible random seed.
+  - Subsampled reads from all samples in the group are combined into a single gzip-compressed FASTQ file representing the fake pool replicate.
 
 **Directories:**
 
@@ -196,7 +196,7 @@ The %groups hash defines which samples (S01, S02, S03, S04) belong to each group
 
 **Dependencies:**
 - Perl (with File::Path and File::Basename)
--  seqtk for random read subsampling
+- seqtk for random read subsampling
 - zcat and gzip for file processing
 
 **code**
